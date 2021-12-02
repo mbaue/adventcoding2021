@@ -67,7 +67,7 @@ public class Part2 {
             }
 
             System.out.println("-------------------SOLUTION-------------------------------------");
-            System.out.println("horizontal pozition = " + position);
+            System.out.println("horizontal position = " + position);
             System.out.println("depth = " + depth);
             System.out.println("solution = " + position * depth);
             System.out.println("----------------------------------------------------------------");
