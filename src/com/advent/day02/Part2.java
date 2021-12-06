@@ -39,6 +39,7 @@ import java.io.IOException;
  *
  * Your puzzle answer was 1727785422.
  */
+
 public class Part2 {
 
     public static void main(String[] args) {
