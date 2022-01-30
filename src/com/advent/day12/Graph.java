@@ -43,6 +43,11 @@ public class Graph {
         return t.getPathsCount();
     }
 
+    public int findPathsFrom2(String nodeStart, String nodeEnd) {
+        Tree2 t = new Tree2(nodeStart, nodeEnd, this);
+        return t.getPathsCount();
+    }
+
     public void print() {
         for (Node n : nodes) {
             System.out.println(n);
