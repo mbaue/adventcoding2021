@@ -17,7 +17,7 @@ public class Node implements Comparable<Node> {
         this.y = y;
     }
 
-    public List<Node> getNeighborVertices() {
+    public List<Node> getNeighborVertices(int dim) {
         List<Node> set = new ArrayList<>();
         int x = this.x;
         int y = this.y;
@@ -25,7 +25,7 @@ public class Node implements Comparable<Node> {
             Node n = new Node(this, x - 1, y);
             set.add(n);
         }
-        if (x + 1 < Day15.GRAPH_DIMENSION) {
+        if (x + 1 < Day15.GRAPH_DIMENSION * dim) {
             Node n = new Node(this, x + 1, y);
             set.add(n);
         }
@@ -33,7 +33,7 @@ public class Node implements Comparable<Node> {
             Node n = new Node(this, x, y - 1);
             set.add(n);
         }
-        if (y + 1 < Day15.GRAPH_DIMENSION) {
+        if (y + 1 < Day15.GRAPH_DIMENSION * dim) {
             Node n = new Node(this, x, y + 1);
             set.add(n);
         }

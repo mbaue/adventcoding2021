@@ -56,7 +56,11 @@ import java.util.*;
 public class Day15 {
 
     public static String[] arr;
-    public static final int GRAPH_DIMENSION = 100;
+    //public static final int GRAPH_DIMENSION = 100;
+
+    public static final int DIM_MULTIPLE = 1;
+    public static final int INPUT_DIMENSION = 100;
+    public static final int GRAPH_DIMENSION = DIM_MULTIPLE * INPUT_DIMENSION;
 
     public static void main(String[] args) {
 
@@ -84,7 +88,7 @@ public class Day15 {
             while (!unvisited.isEmpty()) {
                 Node processedNode = Collections.min(unvisited);
                 System.out.println("hledam sousedy uzlu " + processedNode);
-                List<Node> neighborNodes = processedNode.getNeighborVertices();
+                List<Node> neighborNodes = processedNode.getNeighborVertices(DIM_MULTIPLE);
                 while (!neighborNodes.isEmpty()) {
                     Node actualNode = neighborNodes.get(0);
                     neighborNodes.remove(0);
